@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>Tour Journal</title>
+
+	<!--
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.css"/>
+ 	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+	-->
+
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="http://maps.google.com/maps/api/js?key=AIzaSyAQuYu169H8bwAGnAk6BY2pg3LcfPllq7Q"></script>
+
+	<link rel="stylesheet" href="./leaflet/leaflet.css" />
+	<script src="./leaflet/leaflet.js"></script>
+	
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+	<link rel="stylesheet" href="./leaflet.awesome-markers/leaflet.awesome-markers.css">
+	<script src="https://use.fontawesome.com/ed779626f6.js"></script>
+	<script src="./leaflet.awesome-markers/leaflet.awesome-markers.min.js"></script>
+	
+	<link rel="stylesheet" href="./Leaflet.ExtraMarkers/css/leaflet.extra-markers.min.css">
+	<script src="./Leaflet.ExtraMarkers/js/leaflet.extra-markers.min.js"></script>
+
+	<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+
+	<link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.min.css" />
+	<script type="text/javascript" src="./jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	
+	<link rel="stylesheet" href="./css/my.css" />
+</head>
+
+<body>
+
+<div id="header">
+	Tour Journal
+</div>
+<div id="nav">
+	<fieldset style="position:relative; margin:2px; padding: 2px;">
+		<legend>Agenda:</legend>
+		<input type="text" id="datepicker_from" class="datepicker-journal" style="margin-left:15px" value="02/10/2017">--
+		<input type="text" id="datepicker_to" class="datepicker-journal" value="02/20/2017">
+	</fieldset>
+	<fieldset style="position:relative; margin:2px; padding: 0px;">
+		<legend>Tour Stop:</legend>
+		<input type="text" id="txt_search" value="Go Rentals" class="search_key"></input>
+		<button id="btn_search" >Search</button><br/>
+		<button id="btn_clear_search_results" class="btn-nav-function" >Clear Result</button><br/>
+		<button id="btn_clear_journal" class="btn-nav-function">Clear Journal</button><br/>
+	</fieldset>
+	<fieldset style="position:relative; margin:2px; padding: 0px;">
+		<legend>Nearby:</legend>
+		<fieldset style="margin:0px; padding:0px; border:0px">
+		<select id="nearby-cat">
+			<option>Food</option>
+			<option>Fun</option>
+			<option>Sight</option>
+			<option>Shops</option>
+			<option>Hotel</option>
+		</select>
+		<button id="btn_nearby_explore" class="btn-nav-function" style="margin-left:1px; width:80px">Explore</button>
+		</fieldset>
+		<button id="btn_neary_clear_reults" class="btn-nav-function">Clear Results</button><br/>
+		<button id="btn_neary_clear_nearby" class="btn-nav-function">Clear Nearby</button><br/>
+	</fieldset>
+	<fieldset style="padding:0px">
+	    <legend>Share: </legend>
+	    <label for="checkbox-1">House</label>
+	    <input type="checkbox" id="checkbox-1">
+	    <label for="checkbox-2">Vehicle</label>
+	    <input type="checkbox" id="checkbox-2">
+	</fieldset>
+	<button id="btn_publish_the_journal" class="btn-nav-function">Publish Journal</button><br/>
+	<button id="btn_search_similar_journal" class="btn-nav-function">Similar Journal</button><br/>
+	<hr/>
+</div>
+
+<div id="section">
+	<div id="mapid" style="position:relative; width:100%; height:100%"></div>
+</div>
+
+<div id="footer"></div>
+
+
+<script type="text/javascript" src="js/mymain.js"></script>
+</body>
+</html>
